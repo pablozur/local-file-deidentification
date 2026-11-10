@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "purpose": "deidentified_derivative",
+  "execution": {
+    "authorized_host_required": true,
+    "os_enforced_network_isolation_required": true,
+    "host_sockets_allowed": false,
+    "external_services_allowed": false,
+    "ai_content_processing_allowed": false,
+    "automatic_dependency_downloads_allowed": false,
+    "private_worker_logs_only": true,
+    "agent_output": "fixed_schema_counts_and_codes_only"
+  },
+  "originals": {
+    "read_only": true,
+    "overwrite_allowed": false,
+    "private_hash_before_after": true,
+    "publish_original_paths_or_hashes": false
+  },
+  "identifiers": {
+    "direct_identifiers": "remove",
+    "cross_file_relationships": "job_scoped_random_pseudonyms_if_needed",
+    "private_mapping_in_release": false,
+    "exact_dates": "remove_unless_approved_consistent_shift",
+    "filenames_and_directories": "opaque_random_names",
+    "technical_linkable_ids": "remove_or_consistently_remap",
+    "semantic_format_constants": "retain_if_required",
+    "unnecessary_metadata": "remove",
+    "clinical_non_identifying_content": "preserve"
+  },
+  "review_layers": [
+    "visible_text",
+    "raster_pixels_and_all_frames",
+    "ocr_and_hidden_text",
+    "metadata_and_previews",
+    "annotations_and_revisions",
+    "embedded_objects_and_attachments",
+    "filenames_and_paths",
+    "nested_containers",
+    "manifests_and_reports"
+  ],
+  "verification": {
+    "local_reextraction_required": true,
+    "offline_ocr_for_rasters_required": true,
+    "ambiguous_content": "block_pending_local_human_review",
+    "unknown_or_unhandled_format": "block",
+    "residual_identifier": "block",
+    "partial_release_requires_explicit_authorization": true,
+    "zero_matches_proves_anonymity": false
+  },
+  "release": {
+    "rebuild_archives_from_approved_derivatives_only": true,
+    "normalize_container_timestamps": true,
+    "publish_derivative_sha256": true,
+    "include_private_dictionary_mapping_or_logs": false,
+    "automatic_upload_or_send": false,
+    "claim_irreversible_anonymity": false
+  }
+}

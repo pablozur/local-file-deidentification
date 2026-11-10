@@ -1,0 +1,23 @@
+# Local processing must happen outside this repository.
+/private/
+/work/
+/release/
+/input/
+/output/
+/data/
+.env
+.env.*
+*.log
+*.zip
+*.tar
+*.gz
+*.pdf
+*.dcm
+*.dicom
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tif
+*.tiff
+__pycache__/
